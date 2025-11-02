@@ -27,6 +27,7 @@ This project was executed in three main phases:
 
 **2. Data Transformation (SQL):**
 * Created a single, unified analysis table (`tabel_analisa_kf`) by joining three source tables (transactions, products, and branches).
+* The 'kf_inventory' table was intentionally excluded from this primary aggregation. This is because the three joined tables already provided all mandatory columns required by the project brief  (such as nett_sales, nett_profit, branch_name, and product_name). Therefore, adding the inventory table was not necessary for this specific analysis.
 * Engineered new calculated fields using SQL to meet business requirements, including:
     * `persentase_gross_laba`: Calculated using `CASE WHEN` logic based on product price tiers.
     * `nett_sales`: Calculated as the price after applying discounts.
